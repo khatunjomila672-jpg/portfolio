@@ -288,6 +288,9 @@
         }
 
         .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 8px;
@@ -298,6 +301,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Inter', sans-serif;
+            text-decoration: none;
         }
 
         .btn-primary {
@@ -446,19 +450,23 @@
 
         .about-image {
             position: relative;
-            height: 400px;
-            border-radius: 12px;
+            height: 350px;
+            width: 350px;
+            margin: 0 auto;
+            border-radius: 50%;
             overflow: hidden;
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(96, 165, 250, 0.1));
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid rgba(37, 99, 235, 0.2);
+            border: 4px solid rgba(37, 99, 235, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
-        .about-image i {
-            font-size: 6rem;
-            color: rgba(37, 99, 235, 0.5);
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Services Section */
@@ -572,6 +580,7 @@
             border-radius: 8px;
             transition: all 0.3s ease;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .contact-method:hover {
@@ -725,7 +734,9 @@
             }
 
             .about-image {
-                height: 250px;
+                height: 280px;
+                width: 280px;
+                margin-top: 2rem;
             }
 
             .about {
@@ -805,12 +816,12 @@
             <h1>Verified B2B Leads That Help You Reach the Right Decision Makers</h1>
             <p>Save hours of prospecting with accurate B2B lead generation, verified business emails, LinkedIn profiles, and targeted prospect lists—built to help your business grow faster.</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView();">
-                    <i class="fas fa-envelope"></i> Hire Me
-                </button>
-                <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView();">
+                <a href="https://www.fiverr.com/s/Q7eG29P" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Hire Me on Fiverr
+                </a>
+                <a href="#services" class="btn btn-secondary">
                     <i class="fas fa-briefcase"></i> View Services
-                </button>
+                </a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -841,7 +852,8 @@
                 </div>
             </div>
             <div class="about-image">
-                <i class="fas fa-user-tie"></i>
+                <!-- আপনার ছবিটি এখানে শো করবে (ছবির নাম profile.png করে একই ফোল্ডারে রাখুন) -->
+                <img src="profile.png" alt="Jomila Khatun Profile Picture">
             </div>
         </div>
     </section>
@@ -878,13 +890,13 @@
                 <h3>Let's Work Together</h3>
                 <p style="color: #a0a0a0; margin-bottom: 2rem;">Let's work together to build your next customer list with confidence. Get in touch today!</p>
                 <div class="contact-methods">
-                    <div class="contact-method">
+                    <a href="mailto:khatunjomila672@gmail.com" class="contact-method">
                         <i class="fas fa-envelope"></i>
                         <div class="contact-method-text">
                             <h4>Email Me</h4>
-                            <p>your-email@example.com</p>
+                            <p>khatunjomila672@gmail.com</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="contact-form">
@@ -908,9 +920,9 @@
     <!-- Footer -->
     <footer>
         <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fas fa-globe"></i></a>
+            <a href="https://www.facebook.com/sifatrahman665" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.fiverr.com/s/Q7eG29P" target="_blank" class="social-icon"><i class="fas fa-shopping-bag"></i></a>
+            <a href="mailto:khatunjomila672@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
         </div>
         <div class="footer-text">
             <p>&copy; 2026 Jomila Khatun. All Rights Reserved.</p>
