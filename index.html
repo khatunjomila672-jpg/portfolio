@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sifat Rahman | B2B Lead Generation Specialist</title>
+    <title>Jomila Khatun | B2B Lead Generation Specialist</title>
     <meta name="description" content="Premium B2B Lead Generation, LinkedIn Lead Generation, and Data Management Services. Helping businesses find their perfect leads.">
     <meta name="keywords" content="B2B Lead Generation, LinkedIn Lead Generation, Web Research, Contact List Building">
-    <meta name="author" content="Sifat Rahman">
+    <meta name="author" content="Jomila Khatun">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
@@ -257,23 +257,23 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-size: clamp(2.2rem, 7vw, 4rem);
             font-family: 'Sora', sans-serif;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.3;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #ffffff, #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -2px;
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #a0a0a0;
             margin-bottom: 2.5rem;
-            max-width: 600px;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 300;
@@ -400,7 +400,7 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 3rem;
             align-items: center;
         }
@@ -418,35 +418,30 @@
             line-height: 1.8;
         }
 
-        .about-highlights {
-            display: flex;
-            flex-direction: column;
+        .about-expertise-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
+            margin-top: 1.5rem;
         }
 
-        .highlight {
-            padding: 1.5rem;
+        .expertise-item {
+            padding: 0.8rem 1.2rem;
             background: rgba(37, 99, 235, 0.05);
             border-left: 3px solid #2563eb;
-            border-radius: 8px;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             transition: all 0.3s ease;
         }
 
-        .highlight:hover {
+        .expertise-item:hover {
             background: rgba(37, 99, 235, 0.1);
-            transform: translateX(10px);
-        }
-
-        .highlight h4 {
-            color: #60a5fa;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .highlight p {
-            font-size: 0.95rem;
-            color: #a0a0a0;
-            margin: 0;
+            transform: translateX(5px);
         }
 
         .about-image {
@@ -487,17 +482,6 @@
             overflow: hidden;
             animation: fadeInUp 0.8s ease forwards;
         }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
-        .service-card:nth-child(6) { animation-delay: 0.6s; }
-        .service-card:nth-child(7) { animation-delay: 0.7s; }
-        .service-card:nth-child(8) { animation-delay: 0.8s; }
-        .service-card:nth-child(9) { animation-delay: 0.9s; }
-        .service-card:nth-child(10) { animation-delay: 1s; }
 
         .service-card::before {
             content: '';
@@ -543,383 +527,6 @@
         .service-card p {
             color: #a0a0a0;
             font-size: 0.95rem;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: transparent;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .skill-item {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .skill-item:nth-child(1) { animation-delay: 0.1s; }
-        .skill-item:nth-child(2) { animation-delay: 0.2s; }
-        .skill-item:nth-child(3) { animation-delay: 0.3s; }
-        .skill-item:nth-child(4) { animation-delay: 0.4s; }
-        .skill-item:nth-child(5) { animation-delay: 0.5s; }
-        .skill-item:nth-child(6) { animation-delay: 0.6s; }
-        .skill-item:nth-child(7) { animation-delay: 0.7s; }
-        .skill-item:nth-child(8) { animation-delay: 0.8s; }
-
-        .skill-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
-        }
-
-        .skill-label h4 {
-            color: #ffffff;
-            font-size: 1rem;
-        }
-
-        .skill-percentage {
-            color: #2563eb;
-            font-weight: 600;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #2563eb, #60a5fa);
-            border-radius: 10px;
-            width: 0;
-            animation: fillProgress 1.5s ease forwards;
-        }
-
-        @keyframes fillProgress {
-            to { width: var(--progress); }
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            background: transparent;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .portfolio-card {
-            background: rgba(26, 31, 58, 0.6);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease forwards;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-card:nth-child(1) { animation-delay: 0.1s; }
-        .portfolio-card:nth-child(2) { animation-delay: 0.2s; }
-        .portfolio-card:nth-child(3) { animation-delay: 0.3s; }
-        .portfolio-card:nth-child(4) { animation-delay: 0.4s; }
-        .portfolio-card:nth-child(5) { animation-delay: 0.5s; }
-        .portfolio-card:nth-child(6) { animation-delay: 0.6s; }
-
-        .portfolio-image {
-            height: 200px;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(96, 165, 250, 0.1));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .portfolio-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 30%, rgba(37, 99, 235, 0.1) 50%, transparent 70%);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .portfolio-image i {
-            font-size: 3rem;
-            color: rgba(37, 99, 235, 0.4);
-            z-index: 1;
-        }
-
-        .portfolio-content {
-            padding: 2rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-card h3 {
-            color: #ffffff;
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            font-family: 'Sora', sans-serif;
-        }
-
-        .portfolio-card p {
-            color: #a0a0a0;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            flex: 1;
-        }
-
-        .portfolio-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .meta-tag {
-            font-size: 0.8rem;
-            background: rgba(37, 99, 235, 0.1);
-            color: #60a5fa;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-        }
-
-        .portfolio-card .btn {
-            align-self: flex-start;
-            margin-top: auto;
-        }
-
-        .portfolio-card:hover {
-            background: rgba(37, 99, 235, 0.1);
-            border-color: #2563eb;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-        }
-
-        /* Why Choose Me Section */
-        .why-choose {
-            background: transparent;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: rgba(26, 31, 58, 0.6);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
-        .feature-card:nth-child(5) { animation-delay: 0.5s; }
-        .feature-card:nth-child(6) { animation-delay: 0.6s; }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: #2563eb;
-            margin-bottom: 1rem;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            background: rgba(37, 99, 235, 0.1);
-            border-color: #2563eb;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-        }
-
-        .feature-card:hover .feature-icon {
-            color: #60a5fa;
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .feature-card h3 {
-            color: #ffffff;
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .feature-card p {
-            color: #a0a0a0;
-            font-size: 0.95rem;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: transparent;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: rgba(26, 31, 58, 0.6);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            padding: 2rem;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
-        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .testimonial-card:hover {
-            background: rgba(37, 99, 235, 0.1);
-            border-color: #2563eb;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-        }
-
-        .stars {
-            color: #fbbf24;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-
-        .testimonial-text {
-            color: #a0a0a0;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb, #60a5fa);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .author-info h4 {
-            color: #ffffff;
-            font-size: 0.95rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .author-info p {
-            color: #2563eb;
-            font-size: 0.8rem;
-        }
-
-        /* FAQ Section */
-        .faq {
-            background: transparent;
-        }
-
-        .faq-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: rgba(26, 31, 58, 0.6);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .faq-item:nth-child(1) { animation-delay: 0.1s; }
-        .faq-item:nth-child(2) { animation-delay: 0.2s; }
-        .faq-item:nth-child(3) { animation-delay: 0.3s; }
-        .faq-item:nth-child(4) { animation-delay: 0.4s; }
-        .faq-item:nth-child(5) { animation-delay: 0.5s; }
-        .faq-item:nth-child(6) { animation-delay: 0.6s; }
-
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-            background: rgba(26, 31, 58, 0.6);
-        }
-
-        .faq-question:hover {
-            background: rgba(37, 99, 235, 0.1);
-        }
-
-        .faq-question h4 {
-            color: #ffffff;
-            font-size: 1.1rem;
-            margin: 0;
-            transition: color 0.3s;
-        }
-
-        .faq-question:hover h4 {
-            color: #60a5fa;
-        }
-
-        .faq-icon {
-            color: #2563eb;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            background: rgba(37, 99, 235, 0.05);
-            color: #a0a0a0;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding: 0 1.5rem 1.5rem 1.5rem;
         }
 
         /* Contact Section */
@@ -1035,10 +642,6 @@
             min-height: 120px;
         }
 
-        .form-submit {
-            align-self: flex-start;
-        }
-
         /* Footer */
         footer {
             background: rgba(10, 14, 39, 0.95);
@@ -1046,11 +649,6 @@
             padding: 3rem 2rem;
             text-align: center;
             animation: fadeInUp 0.8s ease;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .social-icons {
@@ -1084,39 +682,6 @@
         .footer-text {
             color: #a0a0a0;
             font-size: 0.95rem;
-        }
-
-        .footer-text p {
-            margin: 0.5rem 0;
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 999;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
-        }
-
-        .back-to-top.show {
-            display: flex;
         }
 
         /* Responsive Design */
@@ -1155,11 +720,6 @@
                 transform: rotate(-45deg) translateY(-8px);
             }
 
-            .hero {
-                min-height: auto;
-                padding: 4rem 2rem 2rem;
-            }
-
             .about-content {
                 grid-template-columns: 1fr;
             }
@@ -1174,22 +734,6 @@
             }
 
             .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1218,43 +762,8 @@
                 font-size: 1.8rem;
             }
 
-            .scroll-indicator {
+            .scroll-indicator, .cursor {
                 display: none;
-            }
-
-            .cursor {
-                display: none;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-buttons {
-                gap: 1rem;
-            }
-
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-
-            .back-to-top {
-                width: 45px;
-                height: 45px;
-                bottom: 1rem;
-                right: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 1.5rem;
-                letter-spacing: 0;
-            }
-
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .logo {
-                font-size: 1.3rem;
             }
         }
     </style>
@@ -1275,13 +784,11 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">SR</div>
+            <div class="logo">JK</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
@@ -1295,14 +802,14 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Helping Businesses Find Their Perfect Leads</h1>
-            <p>I specialize in high-quality B2B lead generation, LinkedIn prospecting, and data management. Transform your sales pipeline with verified, qualified leads that convert.</p>
+            <h1>Verified B2B Leads That Help You Reach the Right Decision Makers</h1>
+            <p>Save hours of prospecting with accurate B2B lead generation, verified business emails, LinkedIn profiles, and targeted prospect lists—built to help your business grow faster.</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView();">
                     <i class="fas fa-envelope"></i> Hire Me
                 </button>
-                <button class="btn btn-secondary">
-                    <i class="fas fa-briefcase"></i> View Portfolio
+                <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView();">
+                    <i class="fas fa-briefcase"></i> View Services
                 </button>
             </div>
         </div>
@@ -1316,18 +823,21 @@
         <div class="about-content">
             <div class="about-text">
                 <h3>About Me</h3>
-                <p>I'm Sifat Rahman, a B2B Lead Generation Specialist with expertise in identifying and connecting businesses with their ideal prospects. With years of experience in LinkedIn prospecting, web research, and data management, I've helped hundreds of businesses build qualified lead pipelines that drive real revenue.</p>
-                <p>My approach combines strategic research, advanced tools, and meticulous attention to detail to deliver leads that not only match your ideal customer profile but are ready to engage.</p>
+                <p>Hi, I'm <strong>Jomila Khatun</strong>, a professional <strong>B2B Lead Generation Specialist</strong> dedicated to helping businesses find qualified prospects and build stronger sales pipelines.</p>
+                <p>I specialize in delivering accurate, manually researched, and verified B2B lead lists that help businesses connect with the right decision-makers. Every project is customized to match your target industry, location, job title, and business goals.</p>
+                <p>I believe that quality data is the foundation of every successful sales and marketing campaign. That's why I focus on accuracy, attention to detail, and delivering clean, reliable data that businesses can trust.</p>
+                <p>Whether you're a startup, agency, recruiter, real estate company, solar business, roofing contractor, or any growing business, I'm here to help you save time, improve outreach, and generate more business opportunities.</p>
                 
-                <div class="about-highlights">
-                    <div class="highlight">
-                        <h4><i class="fas fa-target"></i> My Mission</h4>
-                        <p>To empower businesses with high-quality, verified leads that accelerate growth and drive meaningful revenue impact.</p>
-                    </div>
-                    <div class="highlight">
-                        <h4><i class="fas fa-check-circle"></i> Why Work With Me</h4>
-                        <p>Verified data, fast delivery, competitive pricing, and proven track record of client satisfaction across multiple industries.</p>
-                    </div>
+                <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #ffffff;">My Expertise</h3>
+                <div class="about-expertise-list">
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> B2B Lead Generation</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> LinkedIn Lead Generation</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Web Research</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Company Research</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Decision Maker Research</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Verified Business Emails</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Prospect List Building</div>
+                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Data Collection & Entry</div>
                 </div>
             </div>
             <div class="about-image">
@@ -1350,4 +860,101 @@
             </div>
             <div class="service-card">
                 <i class="fab fa-linkedin service-icon"></i>
-                <h3>LinkedIn
+                <h3>LinkedIn Prospecting</h3>
+                <p>Find target decision-makers using LinkedIn Sales Navigator with high precision.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-envelope-open-text service-icon"></i>
+                <h3>Email Verification</h3>
+                <p>Deliver 100% verified, bounce-free business email addresses for your outreach campaigns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Let's Work Together</h3>
+                <p style="color: #a0a0a0; margin-bottom: 2rem;">Let's work together to build your next customer list with confidence. Get in touch today!</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-method-text">
+                            <h4>Email Me</h4>
+                            <p>your-email@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                </div>
+                <button class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-globe"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2026 Jomila Khatun. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loader FadeOut
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }, 1000);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when link clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, .contact-method').forEach(elem => {
+            elem.addEventListener('mouseenter', () => cursor.classList.add('active'));
+            elem.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
