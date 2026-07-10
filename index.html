@@ -537,6 +537,67 @@
             font-size: 0.95rem;
         }
 
+        /* Portfolio Section Custom Styles */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .portfolio-card {
+            background: rgba(26, 31, 58, 0.4);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            background: #131a35;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: #ffffff;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-content p {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .portfolio-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .meta-tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: #60a5fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
         /* Contact Section */
         .contact {
             background: rgba(37, 99, 235, 0.02);
@@ -744,7 +805,7 @@
                 margin: 4rem 1rem;
             }
 
-            .services-grid {
+            .services-grid, .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -800,6 +861,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
@@ -882,6 +944,45 @@
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-title">
+            <h2>My Recent Work Portfolio</h2>
+            <p>Here are some examples of successful lead generation and data research projects I have delivered.</p>
+        </div>
+        <div class="portfolio-grid">
+            <!-- 1st Item -->
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="lead_sample1.png" alt="B2B Lead Generation Sample" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="portfolio-content">
+                    <h3>E-commerce Owners Target List</h3>
+                    <p>Collected 500+ verified leads of E-commerce shop owners in the USA with a 99% email deliverability rate.</p>
+                    <div class="portfolio-meta">
+                        <span class="meta-tag">LinkedIn Sales Nav</span>
+                        <span class="meta-tag">Email Verification</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2nd Item -->
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="lead_sample2.png" alt="Real Estate Leads" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Real Estate Prospect List</h3>
+                    <p>Targeted active real estate agents and top brokers across Canada for an automation client.</p>
+                    <div class="portfolio-meta">
+                        <span class="meta-tag">Web Research</span>
+                        <span class="meta-tag">Data Entry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-wrapper">
@@ -898,21 +999,23 @@
                     </a>
                 </div>
             </div>
-            <div class="contact-form">
+            
+            <!-- Formspree Live Form Connection -->
+            <form action="https://formspree.io/f/xbdvndng" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
                 </div>
-                <button class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
-            </div>
+                <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+            </form>
         </div>
     </section>
 
