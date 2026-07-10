@@ -86,26 +86,6 @@
             }
         }
 
-        /* Cursor Effect Fixed */
-        .cursor {
-            position: fixed;
-            width: 30px;
-            height: 30px;
-            border: 2px solid #2563eb;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 10000;
-            transform: translate(-50%, -50%);
-            transition: width 0.2s, height 0.2s, border-color 0.2s;
-        }
-
-        .cursor.active {
-            width: 50px;
-            height: 50px;
-            border-color: #60a5fa;
-            background: rgba(37, 99, 235, 0.1);
-        }
-
         /* Animated Gradient Background */
         .gradient-bg {
             position: fixed;
@@ -143,18 +123,6 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(37, 99, 235, 0.1);
             padding: 1rem 0;
-            animation: slideDown 0.5s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .nav-container {
@@ -192,21 +160,6 @@
             transition: color 0.3s;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #2563eb, #60a5fa);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
         .nav-links a:hover {
             color: #60a5fa;
         }
@@ -216,7 +169,6 @@
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
-            z-index: 1001;
         }
 
         .mobile-menu span {
@@ -224,7 +176,6 @@
             height: 3px;
             background: #2563eb;
             border-radius: 2px;
-            transition: 0.3s;
         }
 
         /* Hero Section */
@@ -235,25 +186,12 @@
             justify-content: center;
             padding: 2rem;
             position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
             max-width: 900px;
             text-align: center;
-            animation: fadeInUp 0.8s ease;
-            z-index: 10; /* Clickability Fix */
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            z-index: 10;
         }
 
         .hero h1 {
@@ -266,7 +204,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -1px;
         }
 
         .hero p {
@@ -276,7 +213,6 @@
             max-width: 750px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 300;
         }
 
         .hero-buttons {
@@ -285,8 +221,6 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 3rem;
-            position: relative;
-            z-index: 20;
         }
 
         .btn {
@@ -300,31 +234,12 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
             text-decoration: none;
-            z-index: 25;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #2563eb, #1e40af);
             color: white;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
         }
 
         .btn-primary:hover {
@@ -341,28 +256,7 @@
         .btn-secondary:hover {
             background: rgba(37, 99, 235, 0.1);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
-            border-color: #60a5fa;
             color: #ffffff;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-            z-index: 5;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-10px); }
-        }
-
-        .scroll-indicator i {
-            color: #2563eb;
-            font-size: 1.5rem;
         }
 
         /* Section Styles */
@@ -370,14 +264,11 @@
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            position: relative;
-            z-index: 10;
         }
 
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
-            animation: fadeInUp 0.8s ease;
         }
 
         .section-title h2 {
@@ -394,8 +285,6 @@
         .section-title p {
             font-size: 1.1rem;
             color: #a0a0a0;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
         /* About Section */
@@ -405,7 +294,6 @@
             padding: 4rem;
             margin: 6rem 2rem;
             border: 1px solid rgba(37, 99, 235, 0.1);
-            animation: fadeInUp 0.8s ease;
         }
 
         .about-content {
@@ -425,7 +313,6 @@
         .about-text p {
             color: #a0a0a0;
             margin-bottom: 1.5rem;
-            line-height: 1.8;
         }
 
         .about-expertise-list {
@@ -442,31 +329,15 @@
             border-radius: 4px;
             color: #e0e0e0;
             font-size: 0.95rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .expertise-item:hover {
-            background: rgba(37, 99, 235, 0.1);
-            transform: translateX(5px);
         }
 
         .about-image {
-            position: relative;
             height: 350px;
             width: 350px;
             margin: 0 auto;
             border-radius: 50%;
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(96, 165, 250, 0.1));
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border: 4px solid rgba(37, 99, 235, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
         .about-image img {
@@ -476,10 +347,6 @@
         }
 
         /* Services Section */
-        .services {
-            background: transparent;
-        }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -492,43 +359,17 @@
             padding: 2rem;
             border-radius: 12px;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .service-card:hover::before {
-            left: 100%;
         }
 
         .service-card:hover {
             background: rgba(37, 99, 235, 0.1);
-            border-color: #2563eb;
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
         }
 
         .service-icon {
             font-size: 2.5rem;
             color: #2563eb;
             margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            color: #60a5fa;
-            transform: scale(1.2) rotate(5deg);
         }
 
         .service-card h3 {
@@ -540,10 +381,9 @@
 
         .service-card p {
             color: #a0a0a0;
-            font-size: 0.95rem;
         }
 
-        /* Portfolio Section Custom Styles */
+        /* Portfolio 15 Grid Section */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -561,15 +401,34 @@
         .portfolio-card:hover {
             transform: translateY(-5px);
             border-color: #2563eb;
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
         }
 
         .portfolio-image {
-            height: 200px;
+            height: 220px;
             background: #131a35;
             position: relative;
             overflow: hidden;
             border-bottom: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Fallback if image fails to load */
+        .portfolio-image::after {
+            content: '📊 Work Screenshot Live';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #131a35;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            z-index: -1;
         }
 
         .portfolio-content {
@@ -579,7 +438,7 @@
         .portfolio-content h3 {
             color: #ffffff;
             font-family: 'Sora', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             margin-bottom: 0.5rem;
         }
 
@@ -601,7 +460,6 @@
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 500;
         }
 
         /* Contact Section */
@@ -617,11 +475,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            align-items: start;
-        }
-
-        .contact-info {
-            animation: fadeInUp 0.8s ease;
         }
 
         .contact-info h3 {
@@ -635,7 +488,6 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            margin-bottom: 2rem;
         }
 
         .contact-method {
@@ -645,44 +497,29 @@
             padding: 1rem;
             background: rgba(37, 99, 235, 0.05);
             border-radius: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
             text-decoration: none;
-            position: relative;
-            z-index: 20;
-        }
-
-        .contact-method:hover {
-            background: rgba(37, 99, 235, 0.15);
-            transform: translateX(10px);
         }
 
         .contact-method i {
             font-size: 1.5rem;
             color: #2563eb;
-            width: 50px;
-            text-align: center;
+            width: 30px;
         }
 
         .contact-method-text h4 {
             color: #ffffff;
-            margin-bottom: 0.2rem;
             font-size: 0.95rem;
         }
 
         .contact-method-text p {
             color: #60a5fa;
             font-size: 0.9rem;
-            margin: 0;
         }
 
         .contact-form {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            animation: fadeInUp 0.8s ease;
-            position: relative;
-            z-index: 20;
         }
 
         .form-group {
@@ -693,7 +530,6 @@
         .form-group label {
             color: #ffffff;
             margin-bottom: 0.5rem;
-            font-weight: 500;
             font-size: 0.95rem;
         }
 
@@ -705,20 +541,15 @@
             padding: 0.8rem 1rem;
             border-radius: 8px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            background: rgba(37, 99, 235, 0.1);
             border-color: #2563eb;
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
         }
 
         .form-group textarea {
-            resize: vertical;
             min-height: 120px;
         }
 
@@ -728,9 +559,6 @@
             border-top: 1px solid rgba(37, 99, 235, 0.1);
             padding: 3rem 2rem;
             text-align: center;
-            animation: fadeInUp 0.8s ease;
-            position: relative;
-            z-index: 20;
         }
 
         .social-icons {
@@ -749,108 +577,19 @@
             align-items: center;
             justify-content: center;
             color: #2563eb;
-            transition: all 0.3s ease;
             text-decoration: none;
-            font-size: 1.1rem;
-            position: relative;
-            z-index: 25;
-        }
-
-        .social-icon:hover {
-            background: rgba(37, 99, 235, 0.2);
-            border-color: #60a5fa;
-            color: #60a5fa;
-            transform: translateY(-5px);
         }
 
         .footer-text {
             color: #a0a0a0;
-            font-size: 0.95rem;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: fixed;
-                left: 0;
-                top: 60px;
-                width: 100%;
-                background: rgba(10, 14, 39, 0.95);
-                flex-direction: column;
-                padding: 2rem 1rem;
-                gap: 1rem;
-                animation: slideDown 0.3s ease;
-                z-index: 999;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            .mobile-menu.active span:nth-child(1) {
-                transform: rotate(45deg) translateY(8px);
-            }
-
-            .mobile-menu.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .mobile-menu.active span:nth-child(3) {
-                transform: rotate(-45deg) translateY(-8px);
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                height: 280px;
-                width: 280px;
-                margin-top: 2rem;
-            }
-
-            .about {
-                padding: 2rem;
-                margin: 4rem 1rem;
-            }
-
-            .services-grid, .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .contact {
-                padding: 2rem;
-                margin: 4rem 1rem;
-            }
-
-            section {
-                padding: 4rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .scroll-indicator, .cursor {
-                display: none;
-            }
+            .nav-links { display: none; }
+            .mobile-menu { display: flex; }
+            .about-content, .contact-wrapper, .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
+            .about, .contact { padding: 2rem; margin: 4rem 1rem; }
+            .about-image { height: 280px; width: 280px; }
         }
     </style>
 </head>
@@ -860,12 +599,8 @@
         <div class="loader-spinner"></div>
     </div>
 
-    <!-- Gradient Background -->
     <div class="gradient-bg"></div>
     <div class="gradient-overlay"></div>
-
-    <!-- Cursor -->
-    <div class="cursor"></div>
 
     <!-- Navigation -->
     <nav>
@@ -878,11 +613,6 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -900,9 +630,6 @@
                 </a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
     </section>
 
     <!-- About Section -->
@@ -911,24 +638,20 @@
             <div class="about-text">
                 <h3>About Me</h3>
                 <p>Hi, I'm <strong>Jomila Khatun</strong>, a professional <strong>B2B Lead Generation Specialist</strong> dedicated to helping businesses find qualified prospects and build stronger sales pipelines.</p>
-                <p>I specialize in delivering accurate, manually researched, and verified B2B lead lists that help businesses connect with the right decision-makers. Every project is customized to match your target industry, location, job title, and business goals.</p>
-                <p>I believe that quality data is the foundation of every successful sales and marketing campaign. That's why I focus on accuracy, attention to detail, and delivering clean, reliable data that businesses can trust.</p>
-                <p>Whether you're a startup, agency, recruiter, real estate company, solar business, roofing contractor, or any growing business, I'm here to help you save time, improve outreach, and generate more business opportunities.</p>
+                <p>I focus on accuracy, attention to detail, and delivering clean, reliable data that businesses can trust. Whether you're a startup, agency, recruiter, or growing business, I'm here to help you save time and improve outreach.</p>
                 
                 <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #ffffff;">My Expertise</h3>
                 <div class="about-expertise-list">
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> B2B Lead Generation</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> LinkedIn Lead Generation</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Web Research</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Company Research</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Decision Maker Research</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Verified Business Emails</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Prospect List Building</div>
-                    <div class="expertise-item"><i class="fas fa-check-circle" style="color: #60a5fa;"></i> Data Collection & Entry</div>
+                    <div class="expertise-item">B2B Lead Generation</div>
+                    <div class="expertise-item">LinkedIn Prospecting</div>
+                    <div class="expertise-item">Web Research</div>
+                    <div class="expertise-item">Verified Business Emails</div>
+                    <div class="expertise-item">Prospect List Building</div>
+                    <div class="expertise-item">Data Entry & List Cleaning</div>
                 </div>
             </div>
             <div class="about-image">
-                <img src="profile.png" alt="Jomila Khatun Profile Picture">
+                <img src="profile.png" alt="Profile Picture">
             </div>
         </div>
     </section>
@@ -958,42 +681,164 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section (15 Total Samples Autoloaded) -->
     <section class="portfolio" id="portfolio">
         <div class="section-title">
             <h2>My Recent Work Portfolio</h2>
-            <p>Here are some examples of successful lead generation and data research projects I have delivered.</p>
+            <p>Below are 15 live examples of B2B Lead Generation, Business Email Directories, and Prospect Research Projects.</p>
         </div>
         <div class="portfolio-grid">
-            <!-- 1st Item -->
-            <div class="portfolio-card">
-                <div class="portfolio-image">
-                    <img src="lead_sample1.png" alt="B2B Lead Generation Sample" style="width:100%; height:100%; object-fit:cover;">
-                </div>
-                <div class="portfolio-content">
-                    <h3>E-commerce Owners Target List</h3>
-                    <p>Collected 500+ verified leads of E-commerce shop owners in the USA with a 99% email deliverability rate.</p>
-                    <div class="portfolio-meta">
-                        <span class="meta-tag">LinkedIn Sales Nav</span>
-                        <span class="meta-tag">Email Verification</span>
-                    </div>
-                </div>
-            </div>
             
-            <!-- 2nd Item -->
+            <!-- Sample 1 -->
             <div class="portfolio-card">
-                <div class="portfolio-image">
-                    <img src="lead_sample2.png" alt="Real Estate Leads" style="width:100%; height:100%; object-fit:cover;">
-                </div>
+                <div class="portfolio-image"><img src="sample1.png" alt="Work Sample 1"></div>
                 <div class="portfolio-content">
-                    <h3>Real Estate Prospect List</h3>
-                    <p>Targeted active real estate agents and top brokers across Canada for an automation client.</p>
-                    <div class="portfolio-meta">
-                        <span class="meta-tag">Web Research</span>
-                        <span class="meta-tag">Data Entry</span>
-                    </div>
+                    <h3>B2B Target Lead Generation List</h3>
+                    <p>Verified contact discovery including CEO/Founder direct business emails and company data.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">B2B Leads</span><span class="meta-tag">Research</span></div>
                 </div>
             </div>
+
+            <!-- Sample 2 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample2.png" alt="Work Sample 2"></div>
+                <div class="portfolio-content">
+                    <h3>LinkedIn Sales Nav Prospecting</h3>
+                    <p>Scraped target profiles of key Decision Makers tailored by custom location constraints.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">LinkedIn</span><span class="meta-tag">Sales Nav</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 3 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample3.png" alt="Work Sample 3"></div>
+                <div class="portfolio-content">
+                    <h3>E-commerce Shop Owners Database</h3>
+                    <p>Active direct leads list of global storefront owners with high open-rate deliverability.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">E-commerce</span><span class="meta-tag">Email List</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 4 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample4.png" alt="Work Sample 4"></div>
+                <div class="portfolio-content">
+                    <h3>Real Estate Agent & Broker Network</h3>
+                    <p>Cleaned investor and agent target parameters with active phone, name, and email details.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Real Estate</span><span class="meta-tag">Prospecting</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 5 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample5.png" alt="Work Sample 5"></div>
+                <div class="portfolio-content">
+                    <h3>Digital Marketing Agencies Outreach</h3>
+                    <p>Verified niche list filtering functional marketing agency founders across the USA.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Web Scraping</span><span class="meta-tag">B2B Leads</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 6 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample6.png" alt="Work Sample 6"></div>
+                <div class="portfolio-content">
+                    <h3>Healthcare & Medical Practice Contacts</h3>
+                    <p>Hand-picked verified healthcare facility leads filtering out inactive network emails.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Healthcare</span><span class="meta-tag">Data Cleansing</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 7 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample7.png" alt="Work Sample 7"></div>
+                <div class="portfolio-content">
+                    <h3>Corporate CEO & Executive Directory</h3>
+                    <p>Targeted high-tier executive profiles using deep web directory extraction systems.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Executive Search</span><span class="meta-tag">LinkedIn</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 8 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample8.png" alt="Work Sample 8"></div>
+                <div class="portfolio-content">
+                    <h3>SaaS Business Decision Makers</h3>
+                    <p>Niche specialized prospecting covering active founders in competitive technology spaces.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">SaaS Leads</span><span class="meta-tag">Tech Scraping</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 9 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample9.png" alt="Work Sample 9"></div>
+                <div class="portfolio-content">
+                    <h3>Retail Company Procurement Managers</h3>
+                    <p>List build targeted towards supply chain owners and wholesale inventory buyers.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Retail Mining</span><span class="meta-tag">Contact Leads</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 10 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample10.png" alt="Work Sample 10"></div>
+                <div class="portfolio-content">
+                    <h3>Construction & Roofing Contractor List</h3>
+                    <p>Local SEO directory scraping producing targeted numbers and corporate communication emails.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Local Leads</span><span class="meta-tag">Contractors</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 11 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample11.png" alt="Work Sample 11"></div>
+                <div class="portfolio-content">
+                    <h3>Logistics & Freight Forwarding B2B Leads</h3>
+                    <p>Verified business information sorting active logistics handlers in transport hubs.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Logistics</span><span class="meta-tag">Email Extraction</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 12 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample12.png" alt="Work Sample 12"></div>
+                <div class="portfolio-content">
+                    <h3>Finance & Accounting Firm Executives</h3>
+                    <p>Premium lead profiles validating financial branch manager communication streams.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Finance</span><span class="meta-tag">Verified Lists</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 13 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample13.png" alt="Work Sample 13"></div>
+                <div class="portfolio-content">
+                    <h3>Hospitality & Hotel Chain Managers</h3>
+                    <p>Extracted direct operational lead data sets covering active resort facilities.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Hospitality</span><span class="meta-tag">B2B Contacts</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 14 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample14.png" alt="Work Sample 14"></div>
+                <div class="portfolio-content">
+                    <h3>Solar Industry Energy Leads</h3>
+                    <p>Cleaned database focusing on clean-energy distribution leads and enterprise partners.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Solar Leads</span><span class="meta-tag">Data Building</span></div>
+                </div>
+            </div>
+
+            <!-- Sample 15 -->
+            <div class="portfolio-card">
+                <div class="portfolio-image"><img src="sample15.png" alt="Work Sample 15"></div>
+                <div class="portfolio-content">
+                    <h3>Custom Web Research Outreach Campaign</h3>
+                    <p>A completely manually audited prospect database designed for bulk commercial filters.</p>
+                    <div class="portfolio-meta"><span class="meta-tag">Data Entry</span><span class="meta-tag">Web Research</span></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1014,7 +859,6 @@
                 </div>
             </div>
             
-            <!-- Formspree Live Form Connection -->
             <form action="https://formspree.io/f/xbdvndng" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -1046,42 +890,12 @@
     </footer>
 
     <script>
-        // Loader FadeOut
         window.addEventListener('load', () => {
             const loader = document.querySelector('.loader');
             setTimeout(() => {
                 loader.style.opacity = '0';
                 loader.style.visibility = 'hidden';
             }, 1000);
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when link clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Custom Cursor Fixed
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        document.querySelectorAll('a, button, .contact-method').forEach(elem => {
-            elem.addEventListener('mouseenter', () => cursor.classList.add('active'));
-            elem.addEventListener('mouseleave', () => cursor.classList.remove('active'));
         });
     </script>
 </body>
